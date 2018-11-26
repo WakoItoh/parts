@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="pick.js"></script>
+<script src="draw.js"></script>
+<script src="timetable.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p>タイムテーブルから入力欄に転記される。</p>
+<span>開始と終了をそれぞれクリック</span>
+<form action="result.html" method="get">
+	<table class="timetable" id="timetable-picker">
+		<tr>
+			<th class="hour">00</th>
+			<th class="hour">01</th>
+			<th class="hour">02</th>
+			<th class="hour">03</th>
+			<th class="hour">04</th>
+			<th class="hour">05</th>
+			<th class="hour">06</th>
+			<th class="hour">07</th>
+			<th class="hour">08</th>
+			<th class="hour">09</th>
+			<th class="hour">10</th>
+			<th class="hour">11</th>
+			<th class="hour">12</th>
+			<th class="hour">13</th>
+			<th class="hour">14</th>
+			<th class="hour">15</th>
+			<th class="hour">16</th>
+			<th class="hour">17</th>
+			<th class="hour">18</th>
+			<th class="hour">19</th>
+			<th class="hour">20</th>
+			<th class="hour">21</th>
+			<th class="hour">22</th>
+			<th class="hour">23</th>
+		</tr>
+		<tr>
+			<td class="hour time-option"><span class="hidden time-option-start">00:00</span><span class="hidden time-option-end">01:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">01:00</span><span class="hidden time-option-end">02:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">02:00</span><span class="hidden time-option-end">03:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">03:00</span><span class="hidden time-option-end">04:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">04:00</span><span class="hidden time-option-end">05:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">05:00</span><span class="hidden time-option-end">06:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">06:00</span><span class="hidden time-option-end">07:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">07:00</span><span class="hidden time-option-end">08:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">08:00</span><span class="hidden time-option-end">09:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">09:00</span><span class="hidden time-option-end">10:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">10:00</span><span class="hidden time-option-end">11:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">11:00</span><span class="hidden time-option-end">12:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">12:00</span><span class="hidden time-option-end">13:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">13:00</span><span class="hidden time-option-end">14:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">14:00</span><span class="hidden time-option-end">15:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">15:00</span><span class="hidden time-option-end">16:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">16:00</span><span class="hidden time-option-end">17:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">17:00</span><span class="hidden time-option-end">18:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">18:00</span><span class="hidden time-option-end">19:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">19:00</span><span class="hidden time-option-end">20:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">20:00</span><span class="hidden time-option-end">21:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">21:00</span><span class="hidden time-option-end">22:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">22:00</span><span class="hidden time-option-end">23:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">23:00</span><span class="hidden time-option-end">24:00</span></td>
+		</tr>
+	</table>
+	<span>開始から終了をドラッグ・アンド・ドロップ</span>
+	<table class="timetable" id="timetable-drawer">
+		<tr>
+			<th class="hour">00</th>
+			<th class="hour">01</th>
+			<th class="hour">02</th>
+			<th class="hour">03</th>
+			<th class="hour">04</th>
+			<th class="hour">05</th>
+			<th class="hour">06</th>
+			<th class="hour">07</th>
+			<th class="hour">08</th>
+			<th class="hour">09</th>
+			<th class="hour">10</th>
+			<th class="hour">11</th>
+			<th class="hour">12</th>
+			<th class="hour">13</th>
+			<th class="hour">14</th>
+			<th class="hour">15</th>
+			<th class="hour">16</th>
+			<th class="hour">17</th>
+			<th class="hour">18</th>
+			<th class="hour">19</th>
+			<th class="hour">20</th>
+			<th class="hour">21</th>
+			<th class="hour">22</th>
+			<th class="hour">23</th>
+		</tr>
+		<tr>
+			<td class="hour time-option"><span class="hidden time-option-start">00:00</span><span class="hidden time-option-end">01:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">01:00</span><span class="hidden time-option-end">02:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">02:00</span><span class="hidden time-option-end">03:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">03:00</span><span class="hidden time-option-end">04:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">04:00</span><span class="hidden time-option-end">05:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">05:00</span><span class="hidden time-option-end">06:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">06:00</span><span class="hidden time-option-end">07:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">07:00</span><span class="hidden time-option-end">08:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">08:00</span><span class="hidden time-option-end">09:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">09:00</span><span class="hidden time-option-end">10:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">10:00</span><span class="hidden time-option-end">11:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">11:00</span><span class="hidden time-option-end">12:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">12:00</span><span class="hidden time-option-end">13:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">13:00</span><span class="hidden time-option-end">14:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">14:00</span><span class="hidden time-option-end">15:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">15:00</span><span class="hidden time-option-end">16:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">16:00</span><span class="hidden time-option-end">17:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">17:00</span><span class="hidden time-option-end">18:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">18:00</span><span class="hidden time-option-end">19:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">19:00</span><span class="hidden time-option-end">20:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">20:00</span><span class="hidden time-option-end">21:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">21:00</span><span class="hidden time-option-end">22:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">22:00</span><span class="hidden time-option-end">23:00</span></td>
+			<td class="hour time-option"><span class="hidden time-option-start">23:00</span><span class="hidden time-option-end">24:00</span></td>
+		</tr>
+	</table>
+	<div>
+		<input type="text" name="start" id="start">&ndash;<input type="text" name="end" id="end"><button type="button" class="time-clear">×</button>
+	</div>
+	<input type="submit" value="GO">
+</form>
+</body>
+</html>

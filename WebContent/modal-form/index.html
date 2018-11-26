@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="check.js"></script>
+<script src="modal.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p>親ウィンドウのリンクをクリックすると子ウィンドウに選択肢を表示し、子ウィンドウを閉じると親ウィンドウに選択中の選択肢が表示される。</p>
+<form action="result.html" method="get">
+	<div>
+		<div id="option-checker" class="modal">
+			<input type="checkbox" name="option" id="1" value="1"><label for="1">Option1</label>
+			<input type="checkbox" name="option" id="2" value="2"><label for="2">Option2</label>
+			<input type="checkbox" name="option" id="3" value="3"><label for="3">Option3</label>
+			<input type="checkbox" name="option" id="4" value="4"><label for="4">Option4</label>
+		</div>
+		<div id="option-checked"></div>
+		<button type="button" id="option" class="show-modal">Check Options From Here</button>
+	</div>
+	<input type="submit" value="GO">
+</form>
+</body>
+</html>

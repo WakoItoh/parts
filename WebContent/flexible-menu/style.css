@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+.flex-menu {
+
+}
+
+.flex-menu-item {
+	background-color: #cceeff;
+	border: 1px solid #ffffff;
+	text-align: center;
+}
+
+.flex-menu-item a,
+.flex-menu-item a:link,
+.flex-menu-item a:visited {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	color: #003333;
+	text-decoration: none;
+}

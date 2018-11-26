@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+var query = location.search.substring(1);
+var params =query.split('&');
+for (var i = 0; i < params.length; i++) {
+	document.write('<label>' + params[i] + '</label>');
+}
+</script>
+</body>
+</html>
